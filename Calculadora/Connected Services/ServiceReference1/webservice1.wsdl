@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Restar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RestarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RestarResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SumaOperaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nro1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="nro2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SumaOperacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SumaOperacionesResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Raiz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RaizResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RaizResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotenciaOperaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="base1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="exp" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotenciaOperacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PotenciaOperacionesResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logaritmo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logaritmoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logaritmoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="factorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="factorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="factorialResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dividir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dividirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dividirResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="porcentaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="porcentajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="porcentajeResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="multiplicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="num1" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="num2" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="multiplicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="multiplicacionResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vabsoluto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vabsolutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vabsolutoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RestarSoapIn">
+    <wsdl:part name="parameters" element="tns:Restar" />
+  </wsdl:message>
+  <wsdl:message name="RestarSoapOut">
+    <wsdl:part name="parameters" element="tns:RestarResponse" />
+  </wsdl:message>
+  <wsdl:message name="SumaOperacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:SumaOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="SumaOperacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:SumaOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RaizSoapIn">
+    <wsdl:part name="parameters" element="tns:Raiz" />
+  </wsdl:message>
+  <wsdl:message name="RaizSoapOut">
+    <wsdl:part name="parameters" element="tns:RaizResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaOperacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:PotenciaOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="PotenciaOperacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:PotenciaOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="logaritmoSoapIn">
+    <wsdl:part name="parameters" element="tns:logaritmo" />
+  </wsdl:message>
+  <wsdl:message name="logaritmoSoapOut">
+    <wsdl:part name="parameters" element="tns:logaritmoResponse" />
+  </wsdl:message>
+  <wsdl:message name="factorialSoapIn">
+    <wsdl:part name="parameters" element="tns:factorial" />
+  </wsdl:message>
+  <wsdl:message name="factorialSoapOut">
+    <wsdl:part name="parameters" element="tns:factorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="dividirSoapIn">
+    <wsdl:part name="parameters" element="tns:dividir" />
+  </wsdl:message>
+  <wsdl:message name="dividirSoapOut">
+    <wsdl:part name="parameters" element="tns:dividirResponse" />
+  </wsdl:message>
+  <wsdl:message name="porcentajeSoapIn">
+    <wsdl:part name="parameters" element="tns:porcentaje" />
+  </wsdl:message>
+  <wsdl:message name="porcentajeSoapOut">
+    <wsdl:part name="parameters" element="tns:porcentajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="multiplicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:multiplicacion" />
+  </wsdl:message>
+  <wsdl:message name="multiplicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:multiplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="vabsolutoSoapIn">
+    <wsdl:part name="parameters" element="tns:vabsoluto" />
+  </wsdl:message>
+  <wsdl:message name="vabsolutoSoapOut">
+    <wsdl:part name="parameters" element="tns:vabsolutoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="Restar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resta dos numeros</wsdl:documentation>
+      <wsdl:input message="tns:RestarSoapIn" />
+      <wsdl:output message="tns:RestarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SumaOperaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Suma de Doubles</wsdl:documentation>
+      <wsdl:input message="tns:SumaOperacionesSoapIn" />
+      <wsdl:output message="tns:SumaOperacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Raiz">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Raiz de un numero</wsdl:documentation>
+      <wsdl:input message="tns:RaizSoapIn" />
+      <wsdl:output message="tns:RaizSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PotenciaOperaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Potencia de Doubles</wsdl:documentation>
+      <wsdl:input message="tns:PotenciaOperacionesSoapIn" />
+      <wsdl:output message="tns:PotenciaOperacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logaritmo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logaritomo</wsdl:documentation>
+      <wsdl:input message="tns:logaritmoSoapIn" />
+      <wsdl:output message="tns:logaritmoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Factorial</wsdl:documentation>
+      <wsdl:input message="tns:factorialSoapIn" />
+      <wsdl:output message="tns:factorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dividir">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Division</wsdl:documentation>
+      <wsdl:input message="tns:dividirSoapIn" />
+      <wsdl:output message="tns:dividirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="porcentaje">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Porcentaje</wsdl:documentation>
+      <wsdl:input message="tns:porcentajeSoapIn" />
+      <wsdl:output message="tns:porcentajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="multiplicacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Multiplicacion</wsdl:documentation>
+      <wsdl:input message="tns:multiplicacionSoapIn" />
+      <wsdl:output message="tns:multiplicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vabsoluto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VAbsoluto</wsdl:documentation>
+      <wsdl:input message="tns:vabsolutoSoapIn" />
+      <wsdl:output message="tns:vabsolutoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Restar">
+      <soap:operation soapAction="http://tempuri.org/Restar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumaOperaciones">
+      <soap:operation soapAction="http://tempuri.org/SumaOperaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Raiz">
+      <soap:operation soapAction="http://tempuri.org/Raiz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotenciaOperaciones">
+      <soap:operation soapAction="http://tempuri.org/PotenciaOperaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logaritmo">
+      <soap:operation soapAction="http://tempuri.org/logaritmo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <soap:operation soapAction="http://tempuri.org/factorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dividir">
+      <soap:operation soapAction="http://tempuri.org/dividir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="porcentaje">
+      <soap:operation soapAction="http://tempuri.org/porcentaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplicacion">
+      <soap:operation soapAction="http://tempuri.org/multiplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vabsoluto">
+      <soap:operation soapAction="http://tempuri.org/vabsoluto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Restar">
+      <soap12:operation soapAction="http://tempuri.org/Restar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumaOperaciones">
+      <soap12:operation soapAction="http://tempuri.org/SumaOperaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Raiz">
+      <soap12:operation soapAction="http://tempuri.org/Raiz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotenciaOperaciones">
+      <soap12:operation soapAction="http://tempuri.org/PotenciaOperaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logaritmo">
+      <soap12:operation soapAction="http://tempuri.org/logaritmo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <soap12:operation soapAction="http://tempuri.org/factorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dividir">
+      <soap12:operation soapAction="http://tempuri.org/dividir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="porcentaje">
+      <soap12:operation soapAction="http://tempuri.org/porcentaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplicacion">
+      <soap12:operation soapAction="http://tempuri.org/multiplicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vabsoluto">
+      <soap12:operation soapAction="http://tempuri.org/vabsoluto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://tarea1ws.somee.com/webservice1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://tarea1ws.somee.com/webservice1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
